@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class CompanionKnightStats : BasePlayerStats
 {
-    public string CompanionKnightName = Name("Companion Knight");
-    public int CompanionKnightHealth = Health(100);
-    public int CompanionKnightAttack = Attack(45);
-    public int CompanionKnightDefense = Defense(70);
+    public override void SetNameStat(string text)
+    {
+        CompanionKnightName = text;
+    }
+
+    public override void SetHealthStat(int intValue)
+    {
+        CompanionKnightHealth = intValue;
+    }
+
+    public override void SetAttackStat(int intValue)
+    {
+        CompanionKnightAttack = intValue;
+    }
+
+    public override void SetDefenseStat(int intValue)
+    {
+        CompanionKnightDefense = intValue;
+    }
 }

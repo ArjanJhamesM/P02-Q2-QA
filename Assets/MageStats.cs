@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class MageStats : BasePlayerStats
 {
-    public string MageName = Name("Mage");
-    public int MageHealth = Health(100);
-    public int MageAttack = Attack(60);
-    public int MageDefense = Defense(80);
+    public override void SetNameStat(string text)
+    {
+        MageName = text;
+    }
+
+    public override void SetHealthStat(int intValue)
+    {
+        MageHealth = intValue;
+    }
+
+    public override void SetAttackStat(int intValue)
+    {
+        MageAttack = intValue;
+    }
+
+    public override void SetDefenseStat(int intValue)
+    {
+        MageDefense = intValue;
+    }
 }

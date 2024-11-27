@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class DemonKingStats : BasePlayerStats
 {
-    public string DemonKingName = Name("Demon King");
-    public int DemonKingHealth = Health(100);
-    public int DemonKingAttack = Attack(38);
-    public int DemonKingDefense = Defense(75);
+    public override void SetNameStat(string text)
+    {
+        DemonKingName = text;
+    }
+
+    public override void SetHealthStat(int intValue)
+    {
+        DemonKingHealth = intValue;
+    }
+
+    public override void SetAttackStat(int intValue)
+    {
+        DemonKingAttack = intValue;
+    }
+
+    public override void SetDefenseStat(int intValue)
+    {
+        DemonKingDefense = intValue;
+    }
 }

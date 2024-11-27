@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class SwordsmanStats : BasePlayerStats
 {
-    public string SwordsmanName = Name("Swordsman");
-    public int SwordsmanHealth = Health(100);
-    public int SwordsmanAttack = Attack(38);
-    public int SwordsmanDefense = Defense(75);
+    public override void SetNameStat(string text)
+    {
+        SwordsmanName = text;
+    }
+
+    public override void SetHealthStat(int intValue)
+    {
+        SwordsmanHealth = intValue;
+    }
+
+    public override void SetAttackStat(int intValue)
+    {
+        SwordsmanAttack = intValue;
+    }
+
+    public override void SetDefenseStat(int intValue)
+    {
+        SwordsmanDefense = intValue;
+    }
 }

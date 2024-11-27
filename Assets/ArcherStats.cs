@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class ArcherStats : BasePlayerStats // Inheritance
 {
-    public string ArcherName = Name("Archer");
-    public int ArcherHealth = Health(100);
-    public int ArcherAttack = Attack(55);
-    public int ArcherDefense = Defense(30);
+    public override void SetNameStat(string text)
+    {
+        ArcherName = text;
+    }
+
+    public override void SetHealthStat(int intValue)
+    {
+        ArcherHealth = intValue;
+    }
+
+    public override void SetAttackStat(int intValue)
+    {
+        ArcherAttack = intValue;
+    }
+
+    public override void SetDefenseStat(int intValue)
+    {
+        ArcherDefense = intValue;
+    }
 }

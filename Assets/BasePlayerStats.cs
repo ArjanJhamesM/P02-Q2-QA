@@ -4,23 +4,52 @@ using UnityEngine;
 
 public class BasePlayerStats : MonoBehaviour
 {
-    protected static string Name(string x) // Abstraction using protected keyword
+    public string ArcherName { get; protected set; }
+    public int ArcherHealth { get; protected set; }
+    public int ArcherAttack { get; protected set; }
+    public int ArcherDefense { get; protected set; }
+
+    public string CompanionKnightName { get; protected set; }
+    public int CompanionKnightHealth { get; protected set; }
+    public int CompanionKnightAttack { get; protected set; }
+    public int CompanionKnightDefense { get; protected set; }
+
+
+    public string DemonKingName { get; protected set; }
+    public int DemonKingHealth { get; protected set; }
+    public int DemonKingAttack { get; protected set; }
+    public int DemonKingDefense { get; protected set; }
+
+
+    public string MageName { get; protected set; }
+    public int MageHealth { get; protected set; }
+    public int MageAttack { get; protected set; }
+    public int MageDefense { get; protected set; }
+
+
+    public string SwordsmanName { get; protected set; }
+    public int SwordsmanHealth { get; protected set; }
+    public int SwordsmanAttack { get; protected set; }
+    public int SwordsmanDefense { get; protected set; }
+
+
+    public virtual void SetNameStat(string text)
     {
-        return x;
+        
     }
 
-    protected static int Health(int x)
+    public virtual void SetHealthStat(int intValue)
     {
-        return x;
+
     }
 
-    protected static int Attack(int x)
+    public virtual void SetAttackStat(int intValue)
     {
-        return x;
+
     }
 
-    protected static int Defense(int x)
+    public virtual void SetDefenseStat(int intValue)
     {
-        return x;
+
     }
 }
